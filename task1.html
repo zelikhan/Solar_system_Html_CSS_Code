@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head >
+  <title>Solar System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body background="https://t4.ftcdn.net/jpg/02/43/75/73/360_F_243757367_gBpS6R5c8DB7pL5gw9gi9KXlzFfbdZOA.jpg">
+  <div class="container">
+    <div class="sky"></div>
+    <div class="planets">
+      <img src="mercury.png" alt="Mercury" class="planet">
+      <img src="venus.png" alt="Venus" class="planet">
+      <img src="earth.png" alt="Earth" class="planet">
+      <img src="mars.png" alt="Mars" class="planet">
+      <img src="jupiter.png" alt="Jupiter" class="planet">
+      <img src="saturn.png" alt="Saturn" class="planet">
+      <img src="uranus.png" alt="Uranus" class="planet">
+      <img src="neptune.png" alt="Neptune" class="planet">
+    </div>
+    <div class="caption"></div>
+    <div class="buttons">
+      <button class="btn btn-primary" id="move-planet">Move Planet</button>
+      <button class="btn btn-primary" id="show-planet">Show Planet Name</button>
+      <button class="btn btn-primary" id="change-bg">Change WebPage Background</button>
+    </div>
+  </div>
+  <script>
+    // Get the Move Planet button
+    const movePlanetBtn = document.getElementById("move-planet");
+
+    // Get all the planets
+    const planets = document.querySelectorAll(".planet");
+
+    // Animate all the planets on the click of the Move Planet button
+    movePlanetBtn.addEventListener("click", () => {
+      planets.forEach((planet) => {
+        planet.style.animation = "rotate 10s linear infinite";
+      });
+    });
+
+    // Get the Show Planet Name button
+    const showPlanetBtn = document.getElementById("show-planet");
+
+    // Get the caption element
+    const caption = document.querySelector(".caption");
+
+    // Display the name of a particular planet in the caption on the click of the Show Planet Name button
+    showPlanetBtn.addEventListener("click", () => {
+      planets.forEach((planet) => {
+        planet.addEventListener("click", () => {
+          caption.textContent = planet.alt;
+        });
+      });
+    });
+
+    // Get the Change WebPage Background button
+    const changeBgBtn = document.getElementById("change-bg");
+
+    // Change the background of the web page on the click of the Change WebPage Background button
+    changeBgBtn.addEventListener("click", () => {
+      const sky = document.querySelector(".sky");
+      sky.style.backgroundImage = "url('background.jpg')";
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Center the container div */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Style the sky div */
+  .sky {
+    height: 100px;
+    background-color: #b0e0e6;
+    background-image: linear-gradient(to bottom, #b0e0e6 0%, #87ceeb 100%);
+  }
+  
+  /* Style the planets div */
+  .planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  /* Style the planet images */
+  .planet {
+    height: 100px;
+    margin: 20px;
+    cursor: pointer;
+  }
+
+
+  .planet {
+    animation: rotate 10s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Style the caption div */
+  .caption {
+    margin-top: 50px;
+    font-size: 24px;
+  }
+  
+  /* Style the buttons div */
+  .buttons {
+    margin-top: 50px;
+  }
+  
+  /* Style the button classes using Bootstrap */
+  .btn {
+    color: #fff;
+    background-color: #000000;
+    box-shadow: #000000;
+    border-color: #000000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius:20px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2d2e2e;
+    border-color: #303030;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: none;
+  }
+  
+  .btn-primary:active {
+    background-color: #0062cc;
+    border-color: #005cbf;
+  }
+  
+  .btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 10px;
+  }
+  
+  /* Animate the planets */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
